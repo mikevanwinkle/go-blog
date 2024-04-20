@@ -4,26 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>PlatformX - Platform Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>    
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-
-      <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
-        <div class="max-w-md">
-          
-          <h1 class="h-1">Mike</h1>
+    <div class="relative min-h-screen justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div class="relative bg-white flex-col justify-start px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
           {{ range .Posts }}
-          <div>
-              <h2>{{ .Title }}</h2>
+          <div class="flex-1 mb-10 align-start">
+              <h2 class="text-4xl font-extrabold mb-2">{{ .Title }}</h2>
               <span>{{ .Author }}</span>
               <p>{{ .Body }}</p>
           </div>
           {{ end }}
-            
-          </div>
         </div>
       </div>
     </div>
